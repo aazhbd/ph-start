@@ -3,6 +3,7 @@
 $routes = array(
     'urls' => array(
         '' => '/controller/Views/viewStart',
+        '/(?<lang>[A-Za-z_][A-Za-z0-9_]*)' => '/controller/Views/viewStart',
         '/home' => '/controller/Views/viewHome',
         '/login' => '/controller/Views/viewLogin',
         '/logout' => '/controller/Views/viewLogout',

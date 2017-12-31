@@ -15,9 +15,15 @@ class Views extends Controller
      */
     public function viewStart($params, Application $app)
     {
+        if($params['lang'] == 'de') {
+            $title = "German";
+        }
+        else {
+            $title = "During the day the elderly help us with taking care of the dogs.";
+        }
         $app->setTemplateData(
             array(
-                'title' => 'Start',
+                'title' => $title,
                 'body_content' => 'The start page loaded from App/controller/view.php.'
             )
         );
