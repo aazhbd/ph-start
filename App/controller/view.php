@@ -17,14 +17,25 @@ class Views extends Controller
     {
         if($params['lang'] == 'de') {
             $title = "German";
+            $body = "<p>German text</p>";
         }
         else {
             $title = "During the day the elderly help us with taking care of the dogs.";
+            $body = "<p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>";
         }
         $app->setTemplateData(
             array(
                 'title' => $title,
-                'body_content' => 'The start page loaded from App/controller/view.php.'
+                'body' => $body
             )
         );
 
