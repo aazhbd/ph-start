@@ -17,6 +17,7 @@ $conf = array(
         'user_var' => array(
             'project_name' => 'ArtWebCMS',
             'project_scripts' => '/App/scripts',
+            'project_static' => '/App/static',
         ),
     ),
     'staging' => array(
