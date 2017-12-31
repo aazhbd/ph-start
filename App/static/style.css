@@ -125,3 +125,7 @@ body {
   height: 85px;
   width: 235px;
 }
+
+#subscribe_field {
+  text-align: center;
+}
