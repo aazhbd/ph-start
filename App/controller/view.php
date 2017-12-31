@@ -13,7 +13,7 @@ class Views extends Controller
      * @param $params
      * @param Application $app
      */
-    public function viewRoot($params, Application $app)
+    public function viewStart($params, Application $app)
     {
         $app->setTemplateData(
             array(
