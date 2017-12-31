@@ -28,7 +28,7 @@ class Views extends Controller
             )
         );
 
-        $this->display($app, 'start_en.twig');
+        $this->display($app, 'start.twig');
     }
 
     /**
