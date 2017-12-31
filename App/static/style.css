@@ -115,6 +115,8 @@ body {
 .form_title {
   color: #fff;
   font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: -40px;
 }
 
 #subscribe_botton {
