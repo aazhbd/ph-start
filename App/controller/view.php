@@ -19,6 +19,7 @@ class Views extends Controller
         if($lang == 'de') {
             $title = "German";
             $body = "<p>German text</p>";
+            $form_title = "Don't miss stuff.";
         }
         else {
             $title = "During the day the elderly help us with taking care of the dogs.";
@@ -32,12 +33,14 @@ class Views extends Controller
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
                 kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>";
+            $form_title = "We start soon! <br /> Don't miss any news from us.";
         }
 
         $app->setTemplateData(
             array(
                 'title' => $title,
-                'body_text' => $body
+                'body_text' => $body,
+                'form_title' => $form_title
             )
         );
 
