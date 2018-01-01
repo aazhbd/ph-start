@@ -137,7 +137,7 @@ class Subscriber
         try {
             $query = $app->getDataManager()->getDataManager()
                 ->update(Subscriber::$table_name, array('state' => $state, 'date_updated' => new \FluentLiteral('NOW()')), $subscriber_id);
-            $executed = $query->execute(true);
+            $executed = $query->execute();
         } catch (\PDOException $ex) {
             $app->getErrorManager()->addMessage("Error : " . $ex->getMessage());
             return false;
