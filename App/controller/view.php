@@ -37,7 +37,7 @@ class Views extends Controller
         $app->setTemplateData(
             array(
                 'title' => $title,
-                'body' => $body
+                'body_text' => $body
             )
         );
 
