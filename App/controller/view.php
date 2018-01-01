@@ -15,7 +15,8 @@ class Views extends Controller
      */
     public function viewStart($params, Application $app)
     {
-        if($params['lang'] == 'de') {
+        $lang = isset($params['lang']) ? $params['lang'] : 'en';
+        if($lang == 'de') {
             $title = "German";
             $body = "<p>German text</p>";
         }
@@ -32,6 +33,7 @@ class Views extends Controller
                 kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>";
         }
+
         $app->setTemplateData(
             array(
                 'title' => $title,
