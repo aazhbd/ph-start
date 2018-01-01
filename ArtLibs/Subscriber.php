@@ -122,6 +122,12 @@ class Subscriber
         return $executed;
     }
 
+    /**
+     * @param $state
+     * @param $subscriber_id
+     * @param Application $app
+     * @return bool|int|\PDOStatement
+     */
     public static function setState($state, $subscriber_id, Application $app)
     {
         if (!isset($state) || !isset($subscriber_id)) {
