@@ -51,6 +51,11 @@ class Subscriber
         return $query;
     }
 
+    /**
+     * @param $subscriber_name
+     * @param Application $app
+     * @return null
+     */
     public static function getSubscriberByName($subscriber_name, Application $app)
     {
         try {
