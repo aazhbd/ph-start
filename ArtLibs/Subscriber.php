@@ -70,6 +70,12 @@ class Subscriber
         return $query;
     }
 
+    /**
+     * @param array $subscriber
+     * @param Application $app
+     * @return bool|int
+     * @throws \Exception
+     */
     public static function addSubscriber($subscriber = array(), Application $app)
     {
         if (empty($subscriber)) {
