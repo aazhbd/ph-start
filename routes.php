@@ -2,8 +2,6 @@
 
 $routes = array(
     'urls' => array(
-        '' => '/controller/Views/viewStart',
-        '/(?<lang>[A-Za-z_][A-Za-z0-9_]*)' => '/controller/Views/viewStart',
         '/home' => '/controller/Views/viewHome',
         '/login' => '/controller/Views/viewLogin',
         '/logout' => '/controller/Views/viewLogout',
@@ -20,6 +18,12 @@ $routes = array(
 
         '/category/list' => '/controller/Views/viewCategoryList',
         '/category/(?<opt>[A-Za-z_][A-Za-z0-9_]*)/(?<cid>\d+)' => '/controller/Views/viewCategoryList',
+
+        '/subscriber/list' => '/controller/Views/viewSubscriberList',
+        '/subscriber/(?<opt>[A-Za-z_][A-Za-z0-9_]*)/(?<cid>\d+)' => '/controller/Views/viewSubscriberList',
+
+        '' => '/controller/Views/viewStart',
+        '/(?<lang>[A-Za-z_][A-Za-z0-9_]*)' => '/controller/Views/viewStart',
     )
 );
 

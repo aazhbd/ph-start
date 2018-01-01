@@ -6,7 +6,7 @@ $conf = array(
         'development_mode' => false
     ),
     'development' => array(
-        'db_name' => 'artcmsdb',
+        'db_name' => 'ph-start',
         'db_host' => 'localhost',
         'db_user' => 'root',
         'db_pass' => 'root',

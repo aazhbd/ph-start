@@ -5,6 +5,7 @@ use ArtLibs\Controller;
 use ArtLibs\User;
 use ArtLibs\Article;
 use ArtLibs\Category;
+use ArtLibs\Subscriber;
 
 
 class Views extends Controller
@@ -251,6 +252,69 @@ class Views extends Controller
         }
 
         $this->display($app, 'list_category.twig');
+    }
+
+    /**
+     * @param $params
+     * @param Application $app
+     */
+    public function viewSubscriberList($params, Application $app)
+    {
+        $app->setTemplateData(array(
+            'title' => 'Subscriber List',
+        ));
+
+        $user_info = $app->getSession()->get('user_info');
+
+        if ($user_info['utype'] == 1) {
+            if (isset($params[2])) {
+                $action = $params[1];
+                $subscriber_id = $params[2];
+
+                if ($action == "edit") {
+                    $sub_pre = Subscriber::getSubscriberById($subscriber_id, $app);
+                    $app->setTemplateData(array('action' => 'edit', 'subscriber_id' => $subscriber_id, 'sub_pre' => $sub_pre));
+                } elseif ($action == "enable") {
+                    $app->setTemplateData(
+                        array(
+                            'content_message' => (Subscriber::setState(0, $subscriber_id, $app)) ? 'Subscriber is ' . $params[1] . 'd.' : 'State change failed'
+                        )
+                    );
+                } elseif ($action == "disable") {
+                    $app->setTemplateData(
+                        array(
+                            'content_message' => (Subscriber::setState(1, $subscriber_id, $app)) ? 'Subscriber is ' . $params[1] . 'd.' : 'State change failed'
+                        )
+                    );
+                }
+            }
+
+            if ($app->getRequest()->getMethod() == "POST") {
+                $subscriber = array('email' => trim($app->getRequest()->request->get('email')),);
+
+                if ($app->getRequest()->request->get('editval')) {
+                    $sid = $app->getRequest()->request->get('editval');
+                    $app->setTemplateData(
+                        array(
+                            'content_message' => (Category::updateCategory($sid, $subscriber, $app)) ? 'Subscriber successfully updated' : 'Subscriber save failed'
+                        )
+                    );
+                } elseif (Subscriber::addSubscriber($subscriber, $app)) {
+                    $app->setTemplateData(array('content_message' => 'New subscriber successfully added'));
+                } else {
+                    $app->setTemplateData(array('content_message' => 'New subscriber save failed'));
+                }
+            }
+
+            $subscribers = Subscriber::getSubscribers($app);
+            if ($subscribers) {
+                $app->setTemplateData(array('subscribers' => $subscribers));
+            }
+        } else {
+            $app->setTemplateData(array('content_message' => 'Not found or accessible'));
+        }
+
+        $this->display($app, 'list_subscriber.twig');
     }
 
     /**
