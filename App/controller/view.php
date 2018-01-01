@@ -19,7 +19,7 @@ class Views extends Controller
         if($lang == 'de') {
             $title = "German";
             $body = "<p>German text</p>";
-            $form_title = "Don't miss stuff.";
+            $form_title = "Wir fangen bald an! <br/> Verpasse keine Neuigkeiten von uns.";
         }
         else {
             $title = "During the day the elderly help us with taking care of the dogs.";
