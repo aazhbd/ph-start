@@ -134,6 +134,7 @@ body {
 #subscribe_field {
     text-align: center;
     height: 40px;
+    margin-top: 20px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
