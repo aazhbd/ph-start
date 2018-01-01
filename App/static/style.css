@@ -126,6 +126,9 @@ body {
   border: #fff 5px solid;
   height: 85px;
   width: 235px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 #subscribe_field {
