@@ -74,7 +74,6 @@ class Subscriber
      * @param array $subscriber
      * @param Application $app
      * @return bool|int
-     * @throws \Exception
      */
     public static function addSubscriber($subscriber = array(), Application $app)
     {
@@ -89,10 +88,11 @@ class Subscriber
             $executed = $query->execute();
         } catch (\PDOException $ex) {
             $app->getErrorManager()->addMessage("Error : " . $ex->getMessage());
-            return false;
+            $executed = false;
+        } catch (\Exception $e) {
+            $app->getErrorManager()->addMessage("Error : " . $ex->getMessage());
+            $executed = false;
         }
-
-        var_dump($executed);
 
         return $executed;
     }
