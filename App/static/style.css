@@ -58,6 +58,11 @@ body {
     text-decoration: none;
 }
 
+.languages a:hover {
+    color: #ff4d88;
+    text-decoration: none;
+}
+
 #msg_title p {
     float: none;
     clear: both;
