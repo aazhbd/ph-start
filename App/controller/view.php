@@ -257,7 +257,6 @@ class Views extends Controller
     /**
      * @param $params
      * @param Application $app
-     * @throws Exception
      */
     public function viewSubscriberList($params, Application $app)
     {
