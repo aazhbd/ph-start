@@ -296,7 +296,7 @@ class Views extends Controller
                     $sid = $app->getRequest()->request->get('editval');
                     $app->setTemplateData(
                         array(
-                            'content_message' => (Category::updateCategory($sid, $subscriber, $app)) ? 'Subscriber successfully updated' : 'Subscriber save failed'
+                            'content_message' => (Subscriber::updateSubscriber($sid, $subscriber, $app)) ? 'Subscriber successfully updated' : 'Subscriber save failed'
                         )
                     );
                 } elseif (Subscriber::addSubscriber($subscriber, $app)) {
