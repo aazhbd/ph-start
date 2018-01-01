@@ -5,6 +5,9 @@ namespace ArtLibs;
 
 class Subscriber
 {
+    /**
+     * @var string
+     */
     public static $table_name = "subscribers";
 
     public static function getSubscribers(Application $app, $state = null)
