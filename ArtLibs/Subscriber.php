@@ -97,6 +97,12 @@ class Subscriber
         return $executed;
     }
 
+    /**
+     * @param $subscriber_id
+     * @param array $subscriber
+     * @param Application $app
+     * @return bool|int|\PDOStatement
+     */
     public static function updateSubscriber($subscriber_id, $subscriber = array(), Application $app)
     {
         if (empty($subscriber) || !isset($subscriber_id)) {
