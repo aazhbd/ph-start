@@ -32,6 +32,11 @@ class Subscriber
         return $q;
     }
 
+    /**
+     * @param $subscriber_id
+     * @param Application $app
+     * @return null
+     */
     public static function getSubscriberById($subscriber_id, Application $app)
     {
         try {
