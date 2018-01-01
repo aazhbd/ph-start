@@ -10,6 +10,11 @@ class Subscriber
      */
     public static $table_name = "subscribers";
 
+    /**
+     * @param Application $app
+     * @param null $state
+     * @return array|null
+     */
     public static function getSubscribers(Application $app, $state = null)
     {
         $query = $app->getDataManager()->getDataManager()->from(Subscriber::$table_name);
