@@ -17,7 +17,8 @@
         if($("#errors").html() == '') {
             $("#errors").hide();
         }
-        var simplemde = new SimpleMDE({ element: $("#editorbody")[0] });
+        /* turned off for this project */
+        /*var simplemde = new SimpleMDE({ element: $("#editorbody")[0] });*/
     });
     </script>
 {% endblock %}
@@ -46,7 +47,7 @@
                 </select>
             </fieldset>
             <fieldset class="pure-group">
-                <textarea class="pure-input-1-2" placeholder="Content" id="editorbody" rows="20" name="abody">{{ article.body }}</textarea>
+                <textarea class="pure-input-1-2" placeholder="Content" id="editorbody" rows="20" name="abody" style="width: 100%">{{ article.body }}</textarea>
             </fieldset>
             <fieldset class="pure-group">
                 <input type="text" class="pure-input-1" placeholder="state 0/1" value="{{ article.state }}" name="state" />
