@@ -17,31 +17,13 @@ class Views extends Controller
     public function viewStart($params, Application $app)
     {
         $lang = isset($params['lang']) ? $params['lang'] : 'en';
-        if($lang == 'de') {
-            $title = "German";
-            $body = "<p>German text</p>";
-            $form_title = "Wir fangen bald an! <br/> Verpasse keine Neuigkeiten von uns.";
-        }
-        else {
-            $title = "During the day the elderly help us with taking care of the dogs.";
-            $body = "<p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>";
-            $form_title = "We start soon! <br /> Don't miss any news from us.";
-        }
+        $content = Article::getArticleByUrl($lang, $app);
 
         $app->setTemplateData(
             array(
-                'title' => $title,
-                'body_text' => $body,
-                'form_title' => $form_title
+                'title' => $content['title'],
+                'body_text' => $content['body'],
+                'form_title' => $content['subtitle']
             )
         );
 
