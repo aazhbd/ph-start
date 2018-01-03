@@ -12,6 +12,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
     <link href="{{ path_url }}{{ user_var.project_static }}/style.css" rel="stylesheet">
+    <script src="{{ path_url }}/vendor/components/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="{{ path_url }}{{ user_var.project_scripts }}/jquery.validate.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -38,6 +40,21 @@
                 </div>
                 <button type="submit" id="subscribe_botton" class="btn btn-primary">SUBSCRIBE</button>
             </form>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#publish").validate({
+                        rules:{
+                            email:{ required: true , maxlength: 100 },
+                        },
+                        messages:{
+                            email: {
+                                required: "Enter subscriber email.",
+                                maxlength: "Can't be longer than 100 characters."
+                            }
+                        }
+                    });
+                });
+            </script>
         </div>
         <div class="image_background">
             <img src="{{ path_url }}{{ user_var.project_static }}/images/pawshake_logo-02.png" id="bottom_logo" />
@@ -45,7 +62,6 @@
     </div>
 </div>
 </body>
-
 </html>
 
 {#
