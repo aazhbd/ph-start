@@ -45,7 +45,7 @@ class Article
 
         try {
             $query = $app->getDataManager()->getDataManager()->from("articles")
-                ->where(array("id" => $aid))
+                ->where('id', $aid)
                 ->fetch();
         } catch (\PDOException $ex) {
             $app->getErrorManager()->addMessage("Error : " . $ex->getMessage());
