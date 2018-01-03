@@ -14,19 +14,15 @@ class Article
      */
     public static function getArticles(Application $app, $state = null, $category_id = null)
     {
-        $cond = array();
-
         if ($category_id !== null) {
             $cond['category_id'] = (int)$category_id;
         }
 
-        if ($state !== null) {
-            $cond['state'] = $state;
-        }
-
         try {
             $query = $app->getDataManager()->getDataManager()->from("articles");
-            $query->where($cond);
+            if($state !== null) {
+                $query->where('state', $state);
+            }
             $q = $query->orderBy('date_inserted ASC')->fetchAll();
         } catch (\PDOException $ex) {
             $app->getErrorManager()->addMessage("Error : " . $ex->getMessage());
