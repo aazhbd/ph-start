@@ -144,3 +144,8 @@ body {
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
+
+.form_message {
+    font-size: 2rem;
+    color: #fff;
+}
