@@ -31,9 +31,9 @@
     <div id="right_container" class="col-md-6 col-lg-6 col-sm-6 col-md-offset-0">
         <div id="right_title">
             <p class="form_title">{{ form_title|raw }}</p>
-            <form method="post" action="{{ path_url_postfix }}/subscriber/list">
+            <form id="publish" method="post" action="{{ path_url_postfix }}/subscriber/list/">
                 <div class="form-group">
-                    <input type="email" class="form-control" id="subscribe_field" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="subscribe_field" aria-describedby="email" name="email" placeholder="Enter email">
                 </div>
                 <button type="submit" id="subscribe_botton" class="btn btn-primary">SUBSCRIBE</button>
             </form>
