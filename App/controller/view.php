@@ -27,6 +27,16 @@ class Views extends Controller
             )
         );
 
+        if ($app->getRequest()->getMethod() == "POST") {
+            $subscriber = array('email' => trim($app->getRequest()->request->get('email')),);
+
+            if ($subscriber['email'] != '' && Subscriber::addSubscriber($subscriber, $app)) {
+                $app->setTemplateData(array('form_message' => 'You have subscribed successfully.'));
+            } else {
+                $app->setTemplateData(array('form_message' => 'Your subscription is not added'));
+            }
+        }
+
         $this->display($app, 'start.twig');
     }
 

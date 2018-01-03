@@ -31,7 +31,8 @@
     <div id="right_container" class="col-md-6 col-lg-6 col-sm-6 col-md-offset-0">
         <div id="right_title">
             <p class="form_title">{{ form_title|raw }}</p>
-            <form id="publish" method="post" action="{{ path_url_postfix }}/subscriber/list/">
+            {% if form_message %}<span class="form_message">{{ form_message }}</span>{% endif %}
+            <form id="publish" method="post" action="{{ path_url_postfix }}/new-subscription/">
                 <div class="form-group">
                     <input type="email" class="form-control" id="subscribe_field" aria-describedby="email" name="email" placeholder="Enter email">
                 </div>

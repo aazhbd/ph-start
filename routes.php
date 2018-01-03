@@ -21,6 +21,7 @@ $routes = array(
 
         '/subscriber/list' => '/controller/Views/viewSubscriberList',
         '/subscriber/(?<opt>[A-Za-z_][A-Za-z0-9_]*)/(?<cid>\d+)' => '/controller/Views/viewSubscriberList',
+        '/new-subscription/' => '/controller/Views/viewStart',
 
         '' => '/controller/Views/viewStart',
         '/(?<lang>[A-Za-z_][A-Za-z0-9_]*)' => '/controller/Views/viewStart',
