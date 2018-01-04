@@ -49,7 +49,7 @@ body {
 }
 
 .languages {
-    font-family: 'SourceProLight';
+    font-family: 'SourceProLight', serif;
     float: right;
     margin-top: 40px;
     margin-right: 40px;
