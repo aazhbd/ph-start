@@ -4,8 +4,8 @@
   "license": "MIT",
   "require": {
     "php": ">=5.3.0",
-    "symfony/http-foundation": "3.*",
-    "symfony/expression-language": "3.*",
+    "symfony/http-foundation": "2.6.*",
+    "symfony/expression-language": "2.6.*",
     "envms/fluentpdo": "1.1.*",
     "twig/twig": "1.*",
     "components/jquery": "~2.1",
