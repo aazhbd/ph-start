@@ -49,12 +49,18 @@ body {
 }
 
 .languages {
+    color:#777;
     font-family: 'SourceProLight', serif;
     float: right;
-    margin-top: 40px;
+    margin-top: 57px;
     margin-right: 40px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
+    text-decoration: none;
+}
+
+.languages a {
+    color: #777;
     text-decoration: none;
 }
 
