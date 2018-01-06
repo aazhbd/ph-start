@@ -142,10 +142,15 @@ body {
     border-radius: 0px;
 }
 
+#subscribe_botton:hover {
+    color: #777;
+}
+
 #subscribe_field {
     text-align: center;
     height: 40px;
     margin-top: 20px;
+    font-size: 1.7rem;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
