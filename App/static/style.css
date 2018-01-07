@@ -72,7 +72,7 @@ body {
 #msg_title p {
     float: none;
     clear: both;
-    color: #ff4d88;
+    color:#e85575;/* #ff4d88;*/
     margin-top: 30rem;
     font-size: 3rem;
     font-weight: 700;
