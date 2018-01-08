@@ -33,6 +33,21 @@ body {
     }
 }
 
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+    .image_background {
+        margin-top: 40rem;
+    }
+
+    #bottom_logo {
+        clear: both;
+        float: left;
+        position: absolute;
+        margin-left: -20rem;
+    }
+}
+
 .row {
     margin-left: -15px;
     margin-right: -15px;
@@ -101,13 +116,15 @@ body {
     overflow: hidden;
 }
 
+/*
 .image_background {
     margin-top: 64rem;
 }
+*/
 
 #bottom_logo {
     max-width: 98%;
-    height: auto;
+    /*height: auto;*/
 }
 
 #right_title {
