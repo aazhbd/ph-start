@@ -70,6 +70,10 @@ and (max-device-width : 667px) {
         font-size: 3rem;
         text-align: center;
     }
+
+    #subscribe_field {
+        margin-left: -10px;
+    }
 }
 
 .row {
@@ -183,6 +187,7 @@ and (max-device-width : 667px) {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
+    min-width: 255px;
 }
 
 .form_message {
