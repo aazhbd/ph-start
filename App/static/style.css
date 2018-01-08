@@ -43,6 +43,13 @@ body {
         font-size: 3rem;
         text-align: center;
     }
+
+    #msg_title p {
+        float: none;
+        clear: both;
+        margin-top: 30rem;
+        padding: 0 40px 0 40px;
+    }
 }
 
 @media only screen
@@ -73,6 +80,13 @@ and (max-device-width : 667px) {
 
     #subscribe_field {
         margin-left: -10px;
+    }
+
+    #msg_title p {
+        float: none;
+        clear: both;
+        margin-top: 50rem;
+        padding: 40px 40px 0 40px;
     }
 }
 
@@ -116,11 +130,9 @@ and (max-device-width : 667px) {
     float: none;
     clear: both;
     color:#e85575;/* #ff4d88;*/
-    margin-top: 30rem;
     font-size: 3rem;
     font-weight: 700;
     text-decoration: none;
-    padding: 0 40px 0 40px;
     max-width: 500px;
 }
 
