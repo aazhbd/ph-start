@@ -20,7 +20,7 @@ body {
     width: 100%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 650px) {
     body {
         font-family: 'SourceProRegular', serif;
         padding: 0;
