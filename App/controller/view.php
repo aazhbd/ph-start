@@ -23,7 +23,8 @@ class Views extends Controller
             array(
                 'title' => $content['title'],
                 'body_text' => $content['body'],
-                'form_title' => $content['subtitle']
+                'form_title' => $content['subtitle'],
+                'lang' => $lang
             )
         );
 
