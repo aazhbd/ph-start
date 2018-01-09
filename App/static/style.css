@@ -194,7 +194,7 @@ and (max-device-width : 667px) {
 #subscribe_field {
     text-align: center;
     height: 40px;
-    margin-top: 40px;
+    margin-top: 60px;
     font-size: 1.7rem;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
