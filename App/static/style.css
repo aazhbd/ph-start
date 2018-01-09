@@ -79,7 +79,11 @@ and (max-device-width : 667px) {
     }
 
     #subscribe_field {
-        margin-left: -40px;
+        margin-left: -50px;
+    }
+
+    #subscribe_botton {
+        margin-left: -15px;
     }
 
     #msg_title p {
@@ -199,7 +203,7 @@ and (max-device-width : 667px) {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    min-width: 310px;
+    min-width: 300px;
 }
 
 .form_message {
