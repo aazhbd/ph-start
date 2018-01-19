@@ -47,7 +47,7 @@ class Views extends Controller
      */
     public function viewHome($params, Application $app)
     {
-        $app->setTemplateData(array('title' => 'Home'));
+        $app->setTemplateData(['title' => 'Home']);
 
         if ($app->getRequest()->getMethod() == "POST") {
             $email = $app->getRequest()->request->get('email');
