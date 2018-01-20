@@ -5,3 +5,5 @@ vendor
 .vscode
 webroot/artphp.log
 /nbproject/private/
+error_log
+artphp.log
