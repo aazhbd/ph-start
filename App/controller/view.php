@@ -16,7 +16,7 @@ class Views extends Controller
      */
     public function viewStart($params, Application $app)
     {
-        $lang = isset($params['lang']) ? $params['lang'] : 'en';
+        $lang = isset($params['lang']) ? $params['lang'] : 'de';
         $content = Article::getArticleByUrl($lang, $app);
 
         $app->setTemplateData(
