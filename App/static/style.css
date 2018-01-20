@@ -158,6 +158,7 @@ and (max-device-width : 667px) {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    min-height: 100%;
 }
 
 /*
