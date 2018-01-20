@@ -316,9 +316,7 @@ class Views extends Controller
      */
     public function viewUserList($params, Application $app)
     {
-        $app->setTemplateData(array(
-            'title' => 'Users List',
-        ));
+        $app->setTemplateData(['title' => 'Users List']);
 
         $user_info = $app->getSession()->get('user_info');
 
