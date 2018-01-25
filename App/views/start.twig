@@ -18,48 +18,57 @@
 </head>
 
 <body>
-<div class="row">
-    <div class="col-md-6 col-lg-6 col-sm-6 col-md-offset-0" style="background:#fff; height:100vh;">
-        <div class="logo-wrapper">
-            <img src="{{ path_url }}{{ user_var.project_static }}/images/paw_logo.png" class="logo" />
-        </div>
-        <div class="languages">
-            <a {% if lang == 'de' %}style="color: #e85575;"{% endif %} href="{{ path_url_postfix }}/de">de</a> |
-            <a {% if lang == 'en' %}style="color: #e85575;"{% endif %} href="{{ path_url_postfix }}/en">en</a>
-        </div>
-        <div id="msg_title">
-            <p>{{ title }}</p>
-        </div>
-        <div id="msg_body">{{ body_text|raw }}</div>
-    </div>
-    <div id="right_container" class="col-md-6 col-lg-6 col-sm-6 col-md-offset-0">
-        <div id="right_title">
-            <p class="form_title">{{ form_title|raw }}</p>
-            {% if form_message %}<span class="form_message">{{ form_message }}</span>{% endif %}
-            <form id="publish" method="post" action="{{ path_url_postfix }}/new-subscription/">
-                <div class="form-group">
-                    <input type="email" class="form-control" id="subscribe_field" aria-describedby="email" name="email" placeholder="enter email">
+<div class="container-fluid">
+    <div class="row">
+        <div id="left_container" class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+            <div class="left_wrapper">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-8">
+                        <div class="logo-wrapper">
+                            <img src="{{ path_url }}{{ user_var.project_static }}/images/paw_logo.png" class="logo img-responsive" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-4 text-right">
+                        <div class="languages">
+                            <a {% if lang == 'de' %}class="active"{% endif %} href="{{ path_url_postfix }}/de">de</a> |
+                            <a {% if lang == 'en' %}class="active"{% endif %} href="{{ path_url_postfix }}/en">en</a>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" id="subscribe_botton" class="btn btn-primary">SUBSCRIBE</button>
-            </form>
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    $("#publish").validate({
-                        rules:{
-                            email:{ required: true , maxlength: 100 },
-                        },
-                        messages:{
-                            email: {
-                                required: "Enter subscriber email.",
-                                maxlength: "Can't be longer than 100 characters."
-                            }
-                        }
-                    });
-                });
-            </script>
+                <h1 id="msg_title">{{ title }}</h1>
+                <div id="msg_body">
+                    {{ body_text|raw }}
+                </div>
+            </div>
         </div>
-        <div class="image_background">
-            <img src="{{ path_url }}{{ user_var.project_static }}/images/pawshake_logo-02.png" id="bottom_logo" />
+        <div id="right_container" class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+            <div class="right_wrapper">
+                <div id="right_title">
+                    <p class="form_title">{{ form_title|raw }}</p>
+                    {% if form_message %}<span class="form_message">{{ form_message }}</span>{% endif %}
+                    <form id="publish" method="post" action="{{ path_url_postfix }}/new-subscription/">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="subscribe_field" aria-describedby="email" name="email" placeholder="enter email">
+                        </div>
+                        <button type="submit" id="subscribe_botton" class="btn btn-primary">SUBSCRIBE</button>
+                    </form>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#publish").validate({
+                                rules:{
+                                    email:{ required: true , maxlength: 100 },
+                                },
+                                messages:{
+                                    email: {
+                                        required: "Enter subscriber email.",
+                                        maxlength: "Can't be longer than 100 characters."
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 </div>
