@@ -1,3 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 25, 2018, 9:50:06 AM
+    Author     : siddiquee
+*/
+
 @font-face {
     font-family: SourceProLight;
     src: url(Source_Sans_Pro/SourceSansPro-ExtraLight.ttf);
@@ -72,12 +82,17 @@ body {
 #right_container {
     position: relative;
     background-color: #E85575;
-    background-image: url(images/pawshake_logo-02.png);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
-    -webkit-background-size: 500px 500px;
-    -moz-background-size: 500px 500px;
+}
+
+#right_container .image_background {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    bottom: -250px;
+}
+
+#right_container .image_background img {
+    width: 400px;
 }
 
 #right_title {
@@ -131,10 +146,6 @@ body {
 }
 
 @media (min-width: 768px) {
-    #right_container {
-        background-position-y: 165%;
-    }
-
     #left_container .left_wrapper,
     #right_container .right_wrapper{
         height: 100vh;
@@ -160,8 +171,10 @@ body {
     }
     #right_container {
         padding-bottom: 150px;
+        background-image: url(images/pawshake_logo-02.png);
         background-position-x: -150px;
         background-position-y: 130%;
+        background-repeat: no-repeat;
         background-size: 300px 300px;
         -webkit-background-size: 300px 300px;
         -moz-background-size: 300px 300px;
