@@ -154,12 +154,12 @@ and (max-device-width : 667px) {
     clear: both;
     color: #000;
     margin-top: 2.4rem;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-decoration: none;
     padding: 0 40px 0 40px;
     text-align: left;
-    max-width: 600px;
+    max-width: 660px;
 }
 
 #right_container {
